@@ -1,0 +1,47 @@
+
+/* Gallery Section - Updated to work with footer */
+.gallery-section {
+    padding: var(--spacing-xl) 0;
+    overflow: hidden;
+    position: relative;
+    z-index: 2; /* Changed from 10 to 2 */
+    background: var(--dark);
+    /* Add padding bottom to give space before footer */
+    padding-bottom: calc(var(--spacing-xl) + 100px);
+}
+
+.gallery-scroll-container {
+    position: relative;
+    height: 70vh;
+    margin-top: var(--spacing-lg);
+}
+
+.gallery-photos {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: 9rem;
+    padding: 0 5vw;
+    height: 100%;
+}
+
+.gallery-photo {
+    position: relative;
+    flex-shrink: 0;
+    opacity: 0;
+}
+
+.gallery-photo img {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border: 2px solid rgba(0, 255, 159, 0.2);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+}
+
+.gallery-photo:hover img {
+    border-color: var(--mint);
+    box-shadow: 0 10px 40px var(--mint-glow);
+    transform: scale(1.02);
+}

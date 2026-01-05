@@ -1,0 +1,136 @@
+{
+  "projects": [
+     {
+      "id": 1,
+      "number": "001",
+      "name": "AgileFlow",
+      "emoji": "📊",
+      "sprints": 3,
+      "tags": ["Scrum", "Analytics", "SaaS"],
+      "description": "A comprehensive agile project management tool designed to streamline sprint planning and team collaboration.",
+      "about": [
+        "AgileFlow revolutionizes how development teams manage their sprints and track progress. Built with modern web technologies, it provides real-time insights into team velocity and project health.",
+        "The platform integrates seamlessly with existing development workflows while providing powerful analytics and reporting capabilities."
+      ],
+      "features": [
+        "Real-time sprint tracking",
+        "Team velocity analytics",
+        "Burndown charts",
+        "Collaborative task management",
+        "Integration with popular dev tools"
+      ],
+      "techStack": ["React", "Node.js", "MongoDB", "WebSocket", "D3.js"],
+      "demoUrl": "https://demo.example.com/agileflow",
+      "githubUrl": "https://github.com/team-alpha/agileflow",
+      "scrumMaster": "Alex Chen",
+      "platform": "Website",
+      "teamMembers": [
+        {
+          "name": "Team Member 1",
+          "linkedin": "https://linkedin.com/in/teammember1"
+        },
+        {
+          "name": "Team Member 2",
+          "linkedin": "https://linkedin.com/in/teammember2"
+        },
+        {
+          "name": "Team Member 3",
+          "linkedin": "https://linkedin.com/in/teammember3"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "number": "002",
+      "name": "Mobile Task Manager",
+      "emoji": "📱",
+      "sprints": 3,
+      "tags": ["Mobile", "Productivity", "Native"],
+      "description": "A cross-platform mobile application built for efficient task organization and tracking while on the go.",
+      "about": [
+        "This manager features offline synchronization, gestural controls, and persistent local storage to ensure data integrity and a smooth user experience.",
+        "The architecture is designed for low power consumption and high responsiveness, making it ideal for busy professionals."
+      ],
+      "features": [
+        "Offline data sync",
+        "Intuitive swipe gestures",
+        "Biometric security options",
+        "Customizable theme settings"
+      ],
+      "techStack": ["React Native", "Expo", "RealmDB", "Redux"],
+      "demoUrl": "https://mobile-demo-link.com",
+      "githubUrl": "https://github.com/mobile-team/taskmanager",
+      "scrumMaster": "Jane Doe",
+      "platform": "Mobile App",
+      "teamMembers": [
+        {
+          "name": "Team Member 4",
+          "linkedin": "https://linkedin.com/in/teammember4"
+        },
+        {
+          "name": "Team Member 5",
+          "linkedin": "https://linkedin.com/in/teammember5"
+        }
+      ]
+    }
+  ],
+  "stats": {
+  "studentsCollaborated": 14,
+  "bugsFixed": 950,
+  "gitPushes": 4500,
+  "hoursSpent": 2100
+},
+  "insights": [
+    {
+      "id": "q1",
+      "number": "Q1",
+      "question": "Favorite Sprint?",
+      "prompt": "Click to reveal answer",
+      "answer": "Sprint 3",
+      "context": "42% of students voted"
+    },
+    {
+      "id": "q2",
+      "number": "Q2",
+      "question": "Biggest Challenge?",
+      "prompt": "Click to reveal answer",
+      "answer": "Time Management",
+      "context": "Cited by 67% of teams"
+    },
+    {
+      "id": "q3",
+      "number": "Q3",
+      "question": "Most Used Tool?",
+      "prompt": "Click to reveal answer",
+      "answer": "GitHub",
+      "context": "Unanimous favorite platform"
+    },
+    {
+      "id": "q4",
+      "number": "Q4",
+      "question": "Least Favorite Sprint?",
+      "prompt": "Click to reveal answer",
+      "answer": "Sprint 1",
+      "context": "The learning curve phase"
+    }
+  ],
+  "testimonials": [
+    {
+      "text": "Incredible creativity and execution. These projects demonstrate real-world professional skills.",
+      "author": "Exhibition Visitor"
+    },
+    {
+      "text": "The collaboration and agile methodology implementation was evident in every single project.",
+      "author": "Industry Professional"
+    },
+    {
+      "text": "Impressed by the polish, attention to detail, and user experience in these applications.",
+      "author": "Faculty Member"
+    },
+    {
+      "text": "These students are production-ready. The quality of work here is exceptional.",
+      "author": "Guest Speaker"
+    }
+  ]
+  
+}

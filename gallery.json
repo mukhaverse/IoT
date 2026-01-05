@@ -1,0 +1,67 @@
+
+
+{
+  "gallery": [
+    {
+      "src": "placeholder.png",
+      "caption": "Opening Day",
+      "offset": 70
+    },
+    {
+      "src": "placeholder.png",
+      "caption": "Team Presentations",
+      "offset": 20
+    },
+    {
+      "src": "placeholder.png",
+      "caption": "Demo Sessions",
+      "offset": -80
+    },
+    {
+      "src": "placeholder.png",
+      "caption": "Networking",
+      "offset": 30
+    },
+    {
+      "src": "placeholder.png",
+      "caption": "Award Ceremony",
+      "offset": -10
+    },
+    {
+      "src": "placeholder.png",
+      "caption": "Final Sprint",
+      "offset": 50
+    },
+     {
+      "src": "placeholder.png",
+      "caption": "Opening Day",
+      "offset": -99
+    },
+    {
+      "src": "placeholder.png",
+      "caption": "Team Presentations",
+      "offset": 45
+    },
+    {
+      "src": "placeholder.png",
+      "caption": "Demo Sessions",
+      "offset": -80
+    },
+    {
+      "src": "placeholder.png",
+      "caption": "Networking",
+      "offset": 60
+    },
+    {
+      "src": "placeholder.png",
+      "caption": "Award Ceremony",
+      "offset": -64
+    },
+    {
+      "src": "placeholder.png",
+      "caption": "Final Sprint",
+      "offset": 20
+    }
+  ]
+}
+
