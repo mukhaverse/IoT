@@ -1,136 +1,209 @@
 {
   "projects": [
-     {
+    {
       "id": 1,
       "number": "001",
-      "name": "AgileFlow",
-      "emoji": "📊",
+      "name": "Smart Irrigation System",
+      "emoji": "💧",
       "sprints": 3,
-      "tags": ["Scrum", "Analytics", "SaaS"],
-      "description": "A comprehensive agile project management tool designed to streamline sprint planning and team collaboration.",
+      "tags": ["Agriculture", "Automation", "Sensors"],
+      "description": "Brief summary explaining what this system does and why it matters just a few lines for now",
       "about": [
-        "AgileFlow revolutionizes how development teams manage their sprints and track progress. Built with modern web technologies, it provides real-time insights into team velocity and project health.",
-        "The platform integrates seamlessly with existing development workflows while providing powerful analytics and reporting capabilities."
+        "Introductory paragraph describing the overall idea, problem, and solution",
+        "Additional short text expanding on how the project works what makes it interesting"
       ],
+      "workflow": "General explanation of how the system flows from input to processing to output",
       "features": [
-        "Real-time sprint tracking",
-        "Team velocity analytics",
-        "Burndown charts",
-        "Collaborative task management",
-        "Integration with popular dev tools"
+        "feature",
+        "feature",
+        "feature",
+        "feature"
       ],
-      "techStack": ["React", "Node.js", "MongoDB", "WebSocket", "D3.js"],
-      "demoUrl": "https://demo.example.com/agileflow",
-      "githubUrl": "https://github.com/team-alpha/agileflow",
-      "scrumMaster": "Alex Chen",
-      "platform": "Website",
+      "techStack": [" Microcontroller", " Sensor", "Connectivity Method", "Cloud Service"],
+      "demoUrl": "https://youtube.com/watch?v=placeholder1",
+      "githubUrl": "https://github.com/team/project1",
+      "scrumMaster": "Project Lead A",
+      "platform": "General explanation of the platform setup",
       "teamMembers": [
-        {
-          "name": "Team Member 1",
-          "linkedin": "https://linkedin.com/in/teammember1"
-        },
-        {
-          "name": "Team Member 2",
-          "linkedin": "https://linkedin.com/in/teammember2"
-        },
-        {
-          "name": "Team Member 3",
-          "linkedin": "https://linkedin.com/in/teammember3"
-        }
+        { "name": "Team Member 1", "linkedin": "https://linkedin.com/in/member1" },
+        { "name": "Team Member 2", "linkedin": "https://linkedin.com/in/member2" },
+        { "name": "Team Member 3", "linkedin": "https://linkedin.com/in/member3" }
       ]
     },
     {
       "id": 2,
       "number": "002",
-      "name": "Mobile Task Manager",
-      "emoji": "📱",
+      "name": "Health Monitoring Device",
+      "emoji": "🩺",
       "sprints": 3,
-      "tags": ["Mobile", "Productivity", "Native"],
-      "description": "A cross-platform mobile application built for efficient task organization and tracking while on the go.",
+      "tags": ["Healthcare", "Wearable", "Monitoring"],
+      "description": "Brief summary explaining what this system does and why it matters just a few lines for now",
       "about": [
-        "This manager features offline synchronization, gestural controls, and persistent local storage to ensure data integrity and a smooth user experience.",
-        "The architecture is designed for low power consumption and high responsiveness, making it ideal for busy professionals."
+        "Introductory paragraph describing the overall idea, problem, and solution",
+        "Additional short text expanding on how the project works what makes it interesting"
       ],
+      "workflow": "General explanation of how the system flows from input to processing to output",
       "features": [
-        "Offline data sync",
-        "Intuitive swipe gestures",
-        "Biometric security options",
-        "Customizable theme settings"
+        "feature",
+        "feature",
+        "feature",
+        "feature"
       ],
-      "techStack": ["React Native", "Expo", "RealmDB", "Redux"],
-      "demoUrl": "https://mobile-demo-link.com",
-      "githubUrl": "https://github.com/mobile-team/taskmanager",
-      "scrumMaster": "Jane Doe",
-      "platform": "Mobile App",
+      "techStack": [" Microcontroller", " Sensor", "Connectivity Method", "Cloud Service"],
+      "demoUrl": "https://youtube.com/watch?v=placeholder1",
+      "githubUrl": "https://github.com/team/project1",
+      "scrumMaster": "Project Lead A",
+      "platform": "General explanation of the platform setup",
       "teamMembers": [
-        {
-          "name": "Team Member 4",
-          "linkedin": "https://linkedin.com/in/teammember4"
-        },
-        {
-          "name": "Team Member 5",
-          "linkedin": "https://linkedin.com/in/teammember5"
-        }
+        { "name": "Team Member 1", "linkedin": "https://linkedin.com/in/member1" },
+        { "name": "Team Member 2", "linkedin": "https://linkedin.com/in/member2" },
+        { "name": "Team Member 3", "linkedin": "https://linkedin.com/in/member3" }
+      ]
+    },
+    {
+      "id": 3,
+      "number": "003",
+      "name": "Smart Parking System",
+      "emoji": "🚗",
+      "sprints": 3,
+      "tags": ["Smart City", "Automation", "Real-time"],
+     "description": "Brief summary explaining what this system does and why it matters just a few lines for now",
+      "about": [
+        "Introductory paragraph describing the overall idea, problem, and solution",
+        "Additional short text expanding on how the project works what makes it interesting"
+      ],
+      "workflow": "General explanation of how the system flows from input to processing to output",
+      "features": [
+        "feature",
+        "feature",
+        "feature",
+        "feature"
+      ],
+      "techStack": [" Microcontroller", " Sensor", "Connectivity Method", "Cloud Service"],
+      "demoUrl": "https://youtube.com/watch?v=placeholder1",
+      "githubUrl": "https://github.com/team/project1",
+      "scrumMaster": "Project Lead A",
+      "platform": "General explanation of the platform setup",
+      "teamMembers": [
+        { "name": "Team Member 1", "linkedin": "https://linkedin.com/in/member1" },
+        { "name": "Team Member 2", "linkedin": "https://linkedin.com/in/member2" },
+        { "name": "Team Member 3", "linkedin": "https://linkedin.com/in/member3" }
+      ]
+    },
+    {
+      "id": 4,
+      "number": "004",
+      "name": "Air Quality Monitor",
+      "emoji": "🌬️",
+      "sprints": 3,
+      "tags": ["Environment", "Monitoring", "Analytics"],
+      "description": "Brief summary explaining what this system does and why it matters just a few lines for now",
+      "about": [
+        "Introductory paragraph describing the overall idea, problem, and solution",
+        "Additional short text expanding on how the project works what makes it interesting"
+      ],
+      "workflow": "General explanation of how the system flows from input to processing to output",
+      "features": [
+        "feature",
+        "feature",
+        "feature",
+        "feature"
+      ],
+      "techStack": [" Microcontroller", " Sensor", "Connectivity Method", "Cloud Service"],
+      "demoUrl": "https://youtube.com/watch?v=placeholder1",
+      "githubUrl": "https://github.com/team/project1",
+      "scrumMaster": "Project Lead A",
+      "platform": "General explanation of the platform setup",
+      "teamMembers": [
+        { "name": "Team Member 1", "linkedin": "https://linkedin.com/in/member1" },
+        { "name": "Team Member 2", "linkedin": "https://linkedin.com/in/member2" },
+        { "name": "Team Member 3", "linkedin": "https://linkedin.com/in/member3" }
       ]
     }
   ],
   "stats": {
-  "studentsCollaborated": 14,
-  "bugsFixed": 950,
-  "gitPushes": 4500,
-  "hoursSpent": 2100
-},
+    "studentsCollaborated": 45,
+    "sensorsDeployed": 180,
+    "dataPointsCollected": 25000,
+    "hoursSpent": 3200
+  },
   "insights": [
     {
       "id": "q1",
       "number": "Q1",
-      "question": "Favorite Sprint?",
+      "question": "Most Popular Protocol?",
       "prompt": "Click to reveal answer",
-      "answer": "Sprint 3",
-      "context": "42% of students voted"
+      "answer": "MQTT",
+      "context": "Used by 78% of projects"
     },
     {
       "id": "q2",
       "number": "Q2",
       "question": "Biggest Challenge?",
       "prompt": "Click to reveal answer",
-      "answer": "Time Management",
-      "context": "Cited by 67% of teams"
+      "answer": "Power Management",
+      "context": "Cited by 65% of teams"
     },
     {
       "id": "q3",
       "number": "Q3",
-      "question": "Most Used Tool?",
+      "question": "Favorite Microcontroller?",
       "prompt": "Click to reveal answer",
-      "answer": "GitHub",
-      "context": "Unanimous favorite platform"
+      "answer": "ESP32",
+      "context": "Clear winner for versatility"
     },
     {
       "id": "q4",
       "number": "Q4",
-      "question": "Least Favorite Sprint?",
+      "question": "Most Exciting Application?",
       "prompt": "Click to reveal answer",
-      "answer": "Sprint 1",
-      "context": "The learning curve phase"
+      "answer": "Smart Healthcare",
+      "context": "Highest impact potential"
     }
   ],
   "testimonials": [
     {
-      "text": "Incredible creativity and execution. These projects demonstrate real-world professional skills.",
-      "author": "Exhibition Visitor"
-    },
-    {
-      "text": "The collaboration and agile methodology implementation was evident in every single project.",
+      "text": "Impressive demonstrations of real-world IoT applications. These students are solving actual problems with innovative sensor networks and intelligent automation.",
       "author": "Industry Professional"
     },
     {
-      "text": "Impressed by the polish, attention to detail, and user experience in these applications.",
-      "author": "Faculty Member"
+      "text": "The integration of hardware and software was seamless across all projects. True engineering excellence from concept to deployment.",
+      "author": "Faculty Advisor"
     },
     {
-      "text": "These students are production-ready. The quality of work here is exceptional.",
-      "author": "Guest Speaker"
+      "text": "From edge computing to cloud analytics – these projects showcase the complete IoT ecosystem beautifully. Production-ready solutions.",
+      "author": "Exhibition Visitor"
+    },
+    {
+      "text": "Outstanding attention to power efficiency, scalability, and real-world deployment challenges. These teams are ready for industry.",
+      "author": "Technical Evaluator"
+    }
+  ],
+  "galleryPhotos": [
+    {
+      "id": 1,
+      "src": "images/gallery/photo1.jpg",
+      "alt": "Student demonstrating IoT device"
+    },
+    {
+      "id": 2,
+      "src": "images/gallery/photo2.jpg",
+      "alt": "Project booth setup"
+    },
+    {
+      "id": 3,
+      "src": "images/gallery/photo3.jpg",
+      "alt": "Sensor network demonstration"
+    },
+    {
+      "id": 4,
+      "src": "images/gallery/photo4.jpg",
+      "alt": "Team presenting to judges"
+    },
+    {
+      "id": 5,
+      "src": "images/gallery/photo5.jpg",
+      "alt": "Hardware assembly showcase"
     }
   ]
-  
 }

@@ -13,10 +13,7 @@ function renderProjects() {
 
     projectsTrack.innerHTML = appData.projects.map(project => {
         
-        const primaryTag = project.tags[0] 
-            ? '.' + project.tags[0].toLowerCase().replace(/\s+/g, '_') 
-            : '.project_file';
-
+        // Removed the .tag completely as requested
         return `
         <div class="project-card" data-project-id="${project.id}">
             <div class="project-image">
@@ -24,7 +21,6 @@ function renderProjects() {
                 <img src="placeholder.png" alt="${project.name}" class="project-placeholder">
             </div>
             <div class="project-content">
-                <div class="project-type">${primaryTag}</div>
                 <h3 class="project-name">${project.name}</h3>
                 <p class="project-short-desc">${project.description}</p>
                 
@@ -126,17 +122,15 @@ function initProjectExpansion() {
         const project = appData.projects.find(p => p.id === projectId);
         if (!project) return;
 
-        // Conditional Rendering: Show "VIEW WEBSITE" button ONLY when platform is 'Website'
-       
-        const demoButton = (project.platform === 'Website' && project.demoUrl)
-            ? `<a href="${project.demoUrl}" class="btn btn-outline" target="_blank">🌐 VIEW WEBSITE</a>`
+        // Only show VIDEO DEMO button
+        const demoButton = project.demoUrl
+            ? `<a href="${project.demoUrl}" class="btn" target="_blank">📹 VIDEO DEMO</a>`
             : '';
-            
         
-        const githubButton = project.githubUrl
-            ? `<a href="${project.githubUrl}" class="btn " target="_blank">🗄️ GITHUB REPOSITORY</a>`
-            : '';
-
+        // GitHub button commented out for now    
+        // const githubButton = project.githubUrl
+        //     ? `<a href="${project.githubUrl}" class="btn" target="_blank">🗄️ GITHUB REPOSITORY</a>`
+        //     : '';
 
        
         const content = `
@@ -160,6 +154,11 @@ function initProjectExpansion() {
                     </div>
 
                     <div class="sheet-section">
+                        <div class="sheet-section-title">System Workflow</div>
+                        <p style="line-height: 1.8; opacity: 0.8;">${project.workflow || 'Workflow information coming soon...'}</p>
+                    </div>
+
+                    <div class="sheet-section">
                         <div class="sheet-section-title">Key Features</div>
                         <ul class="feature-list">
                             ${project.features ? project.features.map(f => `<li>${f}</li>`).join('') : ''}
@@ -168,37 +167,36 @@ function initProjectExpansion() {
 
                     <div class="project-actions">
                         ${demoButton}
-                        ${githubButton}
                     </div>
                 </div>
 
                 <div class="sheet-sidebar">
                     <div class="meta-item">
-                        <span class="meta-label">SCRUM MASTER</span>
+                        <span class="meta-label">PROJECT LEAD</span>
                         <div class="meta-value">${project.scrumMaster || 'N/A'}</div>
                     </div>
                     
                     <div class="meta-item">
-                        <span class="meta-label">PLATFORM</span>
-                        <div class="meta-value">${project.platform || 'N/A'}</div>
+                        <span class="meta-label">APPLICATION AREA</span>
+                        <div class="meta-value">${project.tags && project.tags[0] ? project.tags[0] : 'IoT Systems'}</div>
                     </div>
 
                     <div class="meta-item">
-                        <span class="meta-label">SPRINTS</span>
-                        <div class="meta-value">${project.sprints} Sprints</div>
+                        <span class="meta-label">CORE HARDWARE</span>
+                        <div class="meta-value">${project.techStack && project.techStack[0] ? project.techStack[0] : 'Microcontroller'}</div>
                     </div>
 
                     <div class="meta-item">
-                        <span class="meta-label">Tech Stack</span>
+                        <span class="meta-label">SENSORS USED</span>
                         <div class="tech-stack" style="margin-top: 0.5rem">
-                            ${project.techStack.map(tech => 
+                            ${project.techStack.slice(1).map(tech => 
                                 `<span class="tag" style="font-size: 0.7rem">${tech}</span>`
                             ).join('')}
                         </div>
                     </div>
 
                     <div class="meta-item">
-                        <span class="meta-label">Developers</span>
+                        <span class="meta-label">Team Members</span>
                         <div class="team-members-list" style="margin-top: 0.5rem">
                             ${project.teamMembers.map(member => `
                                 <a href="${member.linkedin}" class="team-member-link" target="_blank">

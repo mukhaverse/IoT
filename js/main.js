@@ -8,7 +8,6 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // Load data from JSON file
-// Load data from JSON file
 async function loadData() {
     try {
         const response = await fetch('data.json');
@@ -35,7 +34,15 @@ async function loadData() {
         // renderTestimonials(); 
         
         // Update counts in hero section
-        document.getElementById('teamsCount').textContent = `${new Set(appData.projects.map(p => p.team)).size} TEAMS`;
+        // IoT projects don't have a "team" field, so we count unique project leads instead
+        // Or simply use the total number of projects as a fallback
+        const uniqueLeads = appData.projects 
+            ? new Set(appData.projects.map(p => p.scrumMaster || p.projectLead)).size 
+            : 0;
+        
+        const teamCount = uniqueLeads > 0 ? uniqueLeads : Math.ceil(appData.projects.length / 2);
+        
+        document.getElementById('teamsCount').textContent = `${teamCount} TEAMS`;
         document.getElementById('projectsCount').textContent = `${appData.projects.length} PROJECTS`;
         
         // Initialize interactive components after rendering

@@ -1,29 +1,28 @@
-/* base.css defines variables and core styles */
-/* Footer Container for Sticky Effect */
+
 .footer-container {
     position: sticky;
     bottom: 0;
-    height: 500px; /* Keep this height to define the scroll area for the sticky effect */
+    height: 500px; 
     overflow: hidden;
     z-index: 1;
 }
 
-/* Footer */
+
 .footer {
     position: fixed;
     bottom: 0;
     left: 0;
     right: 0;
-    height: 500px; /* Must match .footer-container height */
+    height: 500px;
     padding: var(--spacing-xl) var(--spacing-md) var(--spacing-md);
     background: var(--dark-navy);
-    /* Changed to a dashed border for a more "data-stream" look */
-    border-top: 1px dashed var(--mint); 
+ 
+    border-top: 1px solid var(--mint); 
     overflow: hidden;
     box-shadow: 0 0 50px rgba(0, 255, 159, 0.1);
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Helps push content apart */
+    justify-content: space-between; 
 }
 
 /* Floating Shapes in Footer */
@@ -58,7 +57,7 @@
     50% { transform: translateY(-30px) rotate(180deg); }
 }
 
-/* Footer Content Layout */
+
 .footer-content {
     max-width: 1400px;
     margin: 0 auto;
@@ -70,7 +69,7 @@
     padding-bottom: 3rem; 
 }
 
-/* Footer Brand Section */
+
 .footer-brand {
     display: flex;
     flex-direction: column;
