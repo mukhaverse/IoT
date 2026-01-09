@@ -1,0 +1,26 @@
+.guestBook-section{
+
+   
+    padding-bottom: calc(var(--spacing-xl) + 200px);
+
+}
+
+.input-section{
+    margin: auto;
+width: 50%; /* Required for centering */
+    min-height: 200px;
+    border: 2px solid rgba(0, 0, 0, 0.237);
+    border-radius: 8px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.entries-section{
+    margin: auto;
+width: 50%; /* Required for centering */
+    min-height: 200px;
+    border: 2px solid black;
+    border-radius: 8px;
+    border: 2px solid rgba(0, 0, 0, 0.237);
+    text-align: center;
+}

@@ -33,7 +33,7 @@
     width: 380px; /* Fixed width */
     flex-shrink: 0;
     background: var(--dark-navy);
-    border: 1px solid rgba(0, 255, 159, 0.1);
+    border: 1px solid rgba(51, 51, 51, 0.1);
     overflow: hidden;
     transition: all 0.4s ease;
     position: relative;
@@ -255,7 +255,7 @@
 
 .bottom-sheet-header {
     padding: 2rem;
-    border-bottom: 1px solid rgba(0, 255, 159, 0.1);
+    border-bottom: 1px solid rgba(51, 51, 51, 0.1);
     position: sticky;
     top: 0;
     background: var(--dark-navy);
@@ -356,7 +356,7 @@
 .sheet-section-title::after {
     content: '';
     height: 1px;
-    background: rgba(0, 255, 159, 0.2);
+    background: rgba(51, 51, 51, 0.2);
     flex-grow: 1;
 }
 
@@ -423,7 +423,7 @@
 }
 
 .team-member-link:hover {
-    background: rgba(133, 104, 214, 0.1);
+    background: rgba(102, 102, 102, 0.1);
     border-color: rgba(255, 255, 255, 0.3);
     transform: translateY(-2px);
 }

@@ -1,4 +1,3 @@
-
 /* Gallery Section - Updated to work with footer */
 .gallery-section {
     padding: var(--spacing-xl) 0;
@@ -35,13 +34,13 @@
     width: 220px;
     height: 220px;
     object-fit: cover;
-    border: 2px solid rgba(0, 255, 159, 0.2);
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+    border: 2px solid rgba(51, 51, 51, 0.162);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.105);
     transition: all 0.3s ease;
 }
 
 .gallery-photo:hover img {
-    border-color: var(--mint);
-    box-shadow: 0 10px 40px var(--mint-glow);
+     border: 3px solid rgba(51, 51, 51, 0.197);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.063);
     transform: scale(1.02);
 }

@@ -20,8 +20,8 @@ function renderStats() {
 
     const stats = [
         { number: iotStats.studentsCollaborated, label: 'Students Collaborated', unit: '' },
-        { number: iotStats.sensorsDeployed, label: 'Sensors Deployed', unit: '+' },
-        { number: iotStats.dataPointsCollected, label: 'Data Points Collected', unit: '+' },
+        { number: iotStats.sensorsDeployed, label: 'Something', unit: '+' },
+        { number: iotStats.dataPointsCollected, label: 'Something', unit: '+' },
         { number: iotStats.hoursSpent, label: 'Hours Spent', unit: '+' }
     ];
 

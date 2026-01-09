@@ -124,7 +124,7 @@ function initProjectExpansion() {
 
         // Only show VIDEO DEMO button
         const demoButton = project.demoUrl
-            ? `<a href="${project.demoUrl}" class="btn" target="_blank">📹 VIDEO DEMO</a>`
+            ? `<a href="${project.demoUrl}" class="btn" target="_blank"> VIDEO DEMO</a>`
             : '';
         
         // GitHub button commented out for now    

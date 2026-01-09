@@ -42,13 +42,13 @@ async function loadData() {
         
         const teamCount = uniqueLeads > 0 ? uniqueLeads : Math.ceil(appData.projects.length / 2);
         
-        document.getElementById('teamsCount').textContent = `${teamCount} TEAMS`;
-        document.getElementById('projectsCount').textContent = `${appData.projects.length} PROJECTS`;
+        // document.getElementById('teamsCount').textContent = `${teamCount} TEAMS`;
+        // document.getElementById('projectsCount').textContent = `${appData.projects.length} PROJECTS`;
         
         // Initialize interactive components after rendering
         setTimeout(() => {
             initCarousel();
-            initFlipCards();
+            
             initProjectExpansion();
             // initScrollAnimations will run all other section animations
             initScrollAnimations();
