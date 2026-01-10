@@ -58,45 +58,6 @@ function initHeroAnimations() {
         ease: 'power3.out'
     });
 
-    // Floating shapes animation
-    gsap.to('.shape-circle', {
-        y: -40,
-        x: 30,
-        rotation: 360,
-        duration: 20,
-        repeat: -1,
-        yoyo: true,
-        ease: 'sine.inOut'
-    });
-
-    gsap.to('.shape-square', {
-        rotation: 405,
-        y: 30,
-        x: -20,
-        duration: 15,
-        repeat: -1,
-        yoyo: true,
-        ease: 'sine.inOut'
-    });
-
-    gsap.to('.shape-triangle', {
-        y: 40,
-        x: -30,
-        rotation: -180,
-        duration: 18,
-        repeat: -1,
-        yoyo: true,
-        ease: 'sine.inOut'
-    });
-
-    gsap.to('.shape-hexagon', {
-        y: -30,
-        x: 40,
-        rotation: 360,
-        duration: 22,
-        repeat: -1,
-        ease: 'sine.inOut'
-    });
 
     // Corner UI fade in
     gsap.from('.corner-ui', {

@@ -57,35 +57,7 @@ function initScrollAnimations() {
             }
         );
 
-    // Insights animation
-    gsap.from('.insight-card', {
-        scrollTrigger: {
-            trigger: '.questionnaire-section',
-            start: 'top 80%',
-            end: 'bottom 20%',
-            toggleActions: 'play none none none'
-        },
-        scale: 0.9,
-        opacity: 0,
-        duration: 0.6,
-        stagger: 0.1,
-        ease: 'back.out(1.4)'
-    });
 
-    // Feedback cards animation
-    gsap.from('.feedback-card', {
-        scrollTrigger: {
-            trigger: '.feedback-section',
-            start: 'top 80%',
-            end: 'bottom 20%',
-            toggleActions: 'play none none none'
-        },
-        y: 50,
-        opacity: 0,
-        duration: 0.8,
-        stagger: 0.1,
-        ease: 'power3.out'
-    });
 }
 
 

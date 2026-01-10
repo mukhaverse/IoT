@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IoT Exhibition 2025</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/hero3d.css">
+    <link rel="stylesheet" href="css/stats.css">
+    <link rel="stylesheet" href="css/projects.css">
+    <link rel="stylesheet" href="css/insights.css">
+    <link rel="stylesheet" href="css/testimonials.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/gallery.css">
+    <link rel="stylesheet" href="css/guestBook.css">
+
+
+</head>
+<body>
+    <!-- Corners -->
+    <div class="corner-ui corner-ui-tl">[IoT]</div>
+    <div class="corner-ui corner-ui-tr">[+]</div>
+    <div class="corner-ui corner-ui-bl">001</div>
+    <div class="corner-ui corner-ui-br">[UJ]</div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-grid"></div>
+        <div class="particles" id="particles"></div>
+        <!-- <div class="floating-shape shape-circle"></div> -->
+        <!-- <div class="floating-shape shape-square"></div> -->
+        <!-- <div class="floating-shape shape-triangle"></div> -->
+        <!-- <div class="floating-shape shape-hexagon"></div> -->
+        
+        <div class="hero-inner">
+
+            <div class="hero-content">
+                <div class="hero-label">EXHIBITION 2025</div>
+                <h1 class="hero-title">
+                    <span class="hero-accent">IoT</span>
+                    <span>SHOWCASE</span>
+                </h1>
+                <p class="hero-subtitle">
+                    An exhibition of student work in Internet of Things technology.
+                </p>
+                <div class="hero-meta">
+                    <span>Location</span>
+                    <span>Date</span>
+                    <span>Time</span>
+                </div>
+            </div>
+
+            <div class="hero-3d">
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="section-label">The Numbers</div>
+        <h2 class="section-title">BY THE <span class="hero-accent">METRICS</span></h2>
+        <div class="stats-grid" id="statsGrid">
+            <!-- Dynamic stats will be rendered here -->
+        </div>
+    </section>
+
+
+
+    <!-- Projects Section -->
+    <section class="projects-section">
+        <div class="projects-header">
+            <div>
+                <div class="section-label">Students Work</div>
+                <h2 class="section-title">FEATURED <span class="hero-accent">PROJECTS</span></h2>
+            </div>
+        </div>
+        
+        <div class="projects-carousel-wrapper">
+            <button class="carousel-btn carousel-btn-prev" id="prevBtn">‹</button>
+            <div class="projects-carousel">
+                <div class="projects-track" id="projectsTrack">
+                    <!-- Dynamic project cards -->
+                </div>
+            </div>
+            <button class="carousel-btn carousel-btn-next" id="nextBtn">›</button>
+        </div>
+
+        <!-- <div class="view-all-container">
+            <a href="#" class="btn"><span>View All Projects</span></a>
+        </div> -->
+    </section>
+
+
+
+    <!-- Questionnaire Section -->
+    <!-- <section class="questionnaire-section">
+        <div class="section-label">Survey Results</div>
+        <h2 class="section-title">CLASS <span class="hero-accent">INSIGHTS</span></h2>
+        <div class="insights-grid" id="insightsGrid">
+           
+        </div>
+    </section> -->
+
+
+
+
+
+
+<!-- Gallery  -->
+<section class="gallery-section">
+    <div class="section-label">Gallery</div>
+    <h2 class="section-title">behind the   <span class="hero-accent">scenes</span></h2>
+    
+    <div class="gallery-scroll-container">
+        <div class="gallery-photos" id="galleryPhotos">
+            <!-- Dynamic photos will be rendered here -->
+        </div>
+    </div>
+</section>
+
+<!-- GuestBook  -->
+<!-- <section class="guestBook-section">
+    <div class="section-label">GuestBook</div>
+    <h2 class="section-title">Share your  <span class="hero-accent">thoughts</span></h2>
+    
+    <div class="input-container"></div>
+
+
+</section> -->
+
+<section class="projects-section guestBook-section">
+      <div class="section-label">GuestBook</div>
+    <h2 class="section-title">Share your  <span class="hero-accent">thoughts</span></h2>
+
+    <div class="input-section position-relative">
+             <span class="skeleton-label">INPUT SECTION</span>
+        </div>
+
+        <div class="entries-section position-relative">
+            <span class="skeleton-label">ENTRIES DISPLAY SECTION</span>
+            
+        </div>
+    
+    <div class="input-container"></div>
+
+    </section>
+
+
+
+<!-- Footer -->
+<div class="footer-container">
+    <footer class="footer">
+        <!-- <div class="footer-shape footer-shape-1"></div>
+        <div class="footer-shape footer-shape-2"></div> -->
+        
+        <div class="footer-content">
+            <div class="footer-brand">
+                <div>
+                    <div class="footer-logo-container">
+                        <div class="footer-logo">[IoT]</div>
+                        <div class="footer-logo-badge">2026</div>
+                    </div>
+                    <p class="footer-tagline">
+                        Showcasing student projects from the Introduction to IoT course.
+                    </p>        
+                   
+                    <div class="footer-personal-logo">
+                        <div class="personal-logo">[Logo maybe]</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- <div class="footer-section navi">
+                <h4 class="footer-section-title">Navigate</h4>
+                <ul class="footer-links">
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href=".stats-section">Statistics</a></li>
+                    <li><a href=".projects-section">Projects</a></li>
+                    <li><a href=".questionnaire-section">Insights</a></li>
+                    <li><a href=".gallery-section">Gallery</a></li>
+                </ul>
+            </div> -->
+
+            <div class="footer-section">
+                <h4 class="footer-section-title">About</h4>
+                <ul class="footer-links">
+                    <li>University of Jeddah</li>
+                    <li>Department of Software Engineering</li>
+                    <li>Instructor</li>
+                    <li><a href="#" id="backToTop">↑ Back to Top</a></li> 
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p class="footer-credits">
+                &copy; 2026 IoT Exhibition
+                <!-- <span>·</span>
+                University of Jeddah
+                <span>·</span>
+                Faculty of Engineering
+                <span>·</span>
+                Designed & Developed by [Your Name] -->
+            </p>
+            <div class="footer-social">
+                <!-- <a href="https://github.com/yourusername" target="_blank" aria-label="GitHub"><i class='bx bxl-github'></i></a>
+                <a href="https://linkedin.com/in/yourprofile" target="_blank" aria-label="LinkedIn"><i class='bx bxl-linkedin'></i></a> -->
+                
+            </div>
+        </div>
+    </footer>
+</div>
+
+    <!-- Bottom Sheet Overlay -->
+    <div class="project-overlay" id="projectOverlay"></div>
+
+    <!-- Bottom Sheet -->
+    <div class="project-bottom-sheet" id="projectBottomSheet">
+        <div class="bottom-sheet-header">
+            <div class="bottom-sheet-drag-handle"></div>
+            <button class="bottom-sheet-close" id="bottomSheetClose">×</button>
+        </div>
+        <div class="bottom-sheet-content" id="bottomSheetContent">
+            <!-- Dynamic content -->
+        </div>
+    </div>
+
+    
+    <script src="js/main.js"></script>
+    <script src="js/hero.js"></script>
+    <script src="js/stats.js"></script>
+    <script src="js/projects.js"></script>
+    <script src="js/insights.js"></script>
+
+    <script src="js/gallery.js"></script>
+    <script src="js/animations.js"></script>
+
+    <script src="https://unpkg.com/three@0.158.0/build/three.min.js"></script>
+    <script src="https://unpkg.com/three@0.158.0/examples/js/loaders/GLTFLoader.js"></script>
+
+    <script src="js/hero3d.js"></script>
+
+</body>
+</html>
