@@ -1,5 +1,8 @@
+gsap.registerPlugin(ScrollTrigger);
+
 function initHero3D() {
   const container = document.querySelector('.hero-3d');
+  const heroSection = document.querySelector('.hero');
   const clock = new THREE.Clock();
 
   const scene = new THREE.Scene();
@@ -9,81 +12,91 @@ function initHero3D() {
     0.1,
     1000
   );
-  camera.position.set(0, 1, 5);
 
   const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
   renderer.setPixelRatio(window.devicePixelRatio);
   renderer.setSize(container.clientWidth, container.clientHeight);
   container.appendChild(renderer.domElement);
 
-  scene.add(new THREE.AmbientLight(0xffffff, 1));
+  camera.position.set(0, 1, 5);
+
+  // Lights
+  scene.add(new THREE.AmbientLight(0xffffff, 2));
   const dirLight = new THREE.DirectionalLight(0xffffff, 1);
   dirLight.position.set(5, 5, 5);
   scene.add(dirLight);
 
-  // <-- declare model here
+  // Model
   let model;
+  let isBreathing = false;
+  const BASE_SCALE = 5;
 
   const loader = new THREE.GLTFLoader();
   loader.load(
-    'assets/models/first3D/scene.gltf',
+    'assets/models/arduino.glb',
     (gltf) => {
       model = gltf.scene;
+      model.scale.set(BASE_SCALE, BASE_SCALE, BASE_SCALE);
+      model.position.set(0, 0, 0);
+      model.rotation.set(Math.PI / 2, Math.PI / 2, 0);
 
-      model.scale.set(10, 10, 10);
-      model.position.set(0, 0, 1.5);
-      model.rotation.y = Math.PI / 2;
-      model.rotation.x = Math.PI / 2;
-
-      model.visible = false;
       scene.add(model);
 
+      // Camera framing
       const box = new THREE.Box3().setFromObject(model);
       const center = box.getCenter(new THREE.Vector3());
       const size = box.getSize(new THREE.Vector3()).length();
-      camera.position.set(center.x, center.y, size * 0.6);
+      camera.position.set(center.x, center.y, size * 1.2);
       camera.lookAt(center);
 
-      model.visible = true;
+      // Entrance animation
+      gsap.timeline({
+        defaults: { ease: "power3.out" },
+        onComplete: () => (isBreathing = true)
+      })
+      .from(model.position, { y: -3, duration: 1.8 }, 0)
+      .from(model.scale, { x: 3, y: 3, z: 3, duration: 1.8, ease: "back.out(1.5)" }, 0);
 
-      // Settle-in entrance animation
-      const tl = gsap.timeline();
-      tl.from(model.position, { y: -5, duration: 1.8, ease: "power3.out" }, 0)
-        .from(model.scale, { x: 5, y: 5, z: 5, duration: 1.8, ease: "back.out(1.7)" }, 0)
-        .from(model.rotation, { x: model.rotation.x + 0.7, y: model.rotation.y - 1, duration: 1.8, ease: "power3.out" }, 0);
+      // Scroll-triggered flip
+      ScrollTrigger.create({
+        trigger: heroSection,
+        start: "top top",
+        end: "+=600",
+        pin: heroSection,
+        pinSpacing: false,
+        scrub: true,
+        animation: gsap.to(model.rotation, {
+          x: model.rotation.x + Math.PI, // flip forward
+          ease: "none"
+        })
+      });
     },
     undefined,
-    (error) => console.error(error)
+    (err) => console.error(err)
   );
 
+  // Resize
   function resize() {
-    const w = container.clientWidth;
-    const h = container.clientHeight;
-    if (!w || !h) return;
-    camera.aspect = w / h;
+    camera.aspect = container.clientWidth / container.clientHeight;
     camera.updateProjectionMatrix();
-    renderer.setSize(w, h);
+    renderer.setSize(container.clientWidth, container.clientHeight);
   }
 
+  window.addEventListener('resize', resize);
+
+  // Animate
   function animate() {
     requestAnimationFrame(animate);
-
     const elapsed = clock.getElapsedTime();
 
-    // Breathing effect
-    if (model) {
-      const scaleFactor = 0.02;
-      model.scale.x = 10 + Math.sin(elapsed * 1.5) * scaleFactor;
-      model.scale.y = 10 + Math.sin(elapsed * 1.5) * scaleFactor;
-      model.scale.z = 10 + Math.sin(elapsed * 1.5) * scaleFactor;
-
-      model.rotation.y = Math.PI / 2 + Math.sin(elapsed * 0.5) * 0.05;
+    if (model && isBreathing) {
+      const breathe = Math.sin(elapsed * 1.5) * 0.03;
+      model.scale.set(BASE_SCALE + breathe, BASE_SCALE + breathe, BASE_SCALE + breathe);
     }
 
     renderer.render(scene, camera);
   }
 
-  window.addEventListener('resize', resize);
   resize();
   animate();
 }

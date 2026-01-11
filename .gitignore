@@ -2,3 +2,4 @@ assets/models/
 *.bin
 node_modules/
 .env
+.glb

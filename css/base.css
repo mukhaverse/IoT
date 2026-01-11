@@ -6,7 +6,7 @@
     box-sizing: border-box;
 }
 
-:root {
+/* :root {
     --dark: #0a0e12;
     --dark-navy: #131920;
     --cream: #f5f5f0;
@@ -17,10 +17,10 @@
     --spacing-md: 2rem;
     --spacing-lg: 4rem;
     --spacing-xl: 6rem;
-}
+} */
 
 
-/* 
+
 :root {
     --dark: #ffffff;
     --dark-navy: #f5f5f5;
@@ -33,7 +33,7 @@
     --spacing-lg: 4rem;
     --spacing-xl: 6rem;
 }
- */
+
 
 body {
     font-family: 'Space Grotesk', 'Segoe UI', system-ui, sans-serif;

@@ -26,35 +26,35 @@ function initParticles() {
 function initHeroAnimations() {
     // Hero animations
     gsap.from('.hero-label', {
-        duration: 1,
+        duration: 1.5,
         y: 30,
         opacity: 0,
         ease: 'power3.out'
     });
 
     gsap.from('.hero-title span', {
-        duration: 1.2,
+        duration: 2,
         y: 80,
         opacity: 0,
-        stagger: 0.2,
-        delay: 0.3,
+        stagger: 0.7,
+        delay: 0.5,
         ease: 'power4.out'
     });
 
     gsap.from('.hero-subtitle', {
-        duration: 1,
+        duration: 1.5,
         y: 30,
         opacity: 0,
-        delay: 0.8,
+        delay: 1.5,
         ease: 'power3.out'
     });
 
     gsap.from('.hero-meta span', {
-        duration: 0.8,
+        duration: 1,
         y: 20,
         opacity: 0,
-        stagger: 0.1,
-        delay: 1.2,
+        stagger: 0.5,
+        delay: 2,
         ease: 'power3.out'
     });
 
