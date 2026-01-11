@@ -9,6 +9,7 @@
     position: relative;
     overflow: hidden;
     padding: var(--spacing-md);
+    
     background: linear-gradient(180deg, var(--dark) 0%, var(--dark-navy) 100%);
 }
 /* .myimg{

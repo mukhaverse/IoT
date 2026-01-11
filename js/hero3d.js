@@ -1,24 +1,28 @@
 gsap.registerPlugin(ScrollTrigger);
 
 function initHero3D() {
+
   const container = document.querySelector('.hero-3d');
   const heroSection = document.querySelector('.hero');
   const clock = new THREE.Clock();
-
   const scene = new THREE.Scene();
+
   const camera = new THREE.PerspectiveCamera(
     45,
     container.clientWidth / container.clientHeight,
     0.1,
     1000
   );
+  camera.position.set(0, 1, 5);
+
+
 
   const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
   renderer.setPixelRatio(window.devicePixelRatio);
   renderer.setSize(container.clientWidth, container.clientHeight);
   container.appendChild(renderer.domElement);
 
-  camera.position.set(0, 1, 5);
+  
 
   // Lights
   scene.add(new THREE.AmbientLight(0xffffff, 2));
@@ -26,12 +30,25 @@ function initHero3D() {
   dirLight.position.set(5, 5, 5);
   scene.add(dirLight);
 
+
+  // Responsive scale function
+  function getResponsiveScale() {
+    const width = window.innerWidth;
+    if (width <= 480) return 2.5;
+    if (width <= 768) return 3.5;
+    return 5;
+  }
+
+
+
+
   // Model
   let model;
   let isBreathing = false;
-  const BASE_SCALE = 5;
+  let BASE_SCALE = getResponsiveScale();
 
   const loader = new THREE.GLTFLoader();
+
   loader.load(
     'assets/models/arduino.glb',
     (gltf) => {
@@ -54,7 +71,7 @@ function initHero3D() {
         defaults: { ease: "power3.out" },
         onComplete: () => (isBreathing = true)
       })
-      .from(model.position, { y: -3, duration: 1.8 }, 0)
+      .from(model.position, { y: 3, duration: 1.8 }, 0)
       .from(model.scale, { x: 3, y: 3, z: 3, duration: 1.8, ease: "back.out(1.5)" }, 0);
 
       // Scroll-triggered flip
@@ -75,6 +92,9 @@ function initHero3D() {
     (err) => console.error(err)
   );
 
+
+
+
   // Resize
   function resize() {
     camera.aspect = container.clientWidth / container.clientHeight;
@@ -83,6 +103,10 @@ function initHero3D() {
   }
 
   window.addEventListener('resize', resize);
+
+
+
+
 
   // Animate
   function animate() {
@@ -97,8 +121,11 @@ function initHero3D() {
     renderer.render(scene, camera);
   }
 
+
+
   resize();
   animate();
+
 }
 
 window.addEventListener('load', initHero3D);

@@ -9,18 +9,9 @@
     position: relative;
     overflow: hidden;
     padding: var(--spacing-md);
+    padding-bottom: 300px;
     background: linear-gradient(180deg, var(--dark) 0%, var(--dark-navy) 100%);
 }
-/* .myimg{
-    width: 550px;
-}
-.hero span, p{
-    text-align: left;
-    
-}
-.hero span{
-    padding-left: 3%;
-} */
 
 .particles {
     position: absolute;
@@ -47,49 +38,7 @@
     opacity: 0.03;
 }
 
-/* .floating-shape {
-    position: absolute;
-    border: 1px solid var(--mint);
-    opacity: 0.15;
-}
-
-.shape-circle {
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
-    top: 15%;
-    left: 10%;
-}
-
-.shape-square {
-    width: 200px;
-    height: 200px;
-    bottom: 20%;
-    right: 15%;
-    transform: rotate(45deg);
-} */
-
-/* .shape-triangle {
-    width: 150px;
-    height: 150px;
-    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-    background: var(--mint);
-    opacity: 0.08;
-    top: 50%;
-    right: 25%;
-} */
-
-/* .shape-hexagon {
-    width: 150px;
-    height: 150px;
-    clip-path: polygon(30% 0%, 70% 0%, 100% 50%, 70% 100%, 30% 100%, 0% 50%);
-    background: transparent;
-    border: 1px solid var(--mint);
-    opacity: 0.12;
-    bottom: 30%;
-    left: 20%;
-} */
- .hero-inner {
+.hero-inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -106,19 +55,13 @@
 .hero-content p{
     margin: 0;
 }
+
 .hero-3d {
   flex: 1;
   width: 90%;
   height: 700px;
   position: relative;
 }
-
-
-/* .hero-content {
-    text-align: left;
-    z-index: 1;
-    max-width: 1000px;
-} */
 
 .hero-label {
     font-size: 0.875rem;
@@ -168,26 +111,46 @@
     .corner-ui-tl, .corner-ui-bl { left: 1rem; }
     .corner-ui-tr, .corner-ui-br { right: 1rem; }
     
+    .hero {
+        align-items: flex-end;
+        gap: 5%;
+        padding-bottom: 150px;
+    }
+    
+    .hero-inner {
+        align-items: flex-end;
+    }
+    
+    .hero-3d {
+        position: absolute;
+        top: 10%;
+        right: 5%;
+        width: 65%;
+        height: 350px;
+    }
+    
     .hero-meta {
         flex-direction: column;
         gap: 1rem;
     }
-    .hero span{
-    padding-left: 1%;
-}
-
 }
 
 @media (max-width: 480px) {
     .hero {
         padding: var(--spacing-sm);
+        padding-bottom: 100px;
+        gap: 3%;
+    }
+    
+    .hero-3d {
+        position: absolute;
+        top: 8%;
+        right: 3%;
+        width: 62%;
+        height: 280px;
     }
     
     .hero-title {
         font-size: clamp(2.5rem, 15vw, 4rem);
     }
-    .hero span{
-    padding-left: 1%;
-}
-
 }
