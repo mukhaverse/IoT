@@ -78,12 +78,13 @@ function initHero3D() {
       ScrollTrigger.create({
         trigger: heroSection,
         start: "top top",
-        end: "+=600",
+        end: "+=1000",
         pin: heroSection,
         pinSpacing: false,
         scrub: true,
         animation: gsap.to(model.rotation, {
-          x: model.rotation.x + Math.PI, // flip forward
+          x: model.rotation.x + Math.PI, 
+           y: model.rotation.y + Math.PI, 
           ease: "none"
         })
       });
