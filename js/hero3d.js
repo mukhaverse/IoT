@@ -25,7 +25,7 @@ function initHero3D() {
   
 
   // Lights
-  scene.add(new THREE.AmbientLight(0xffffff, 2));
+  scene.add(new THREE.AmbientLight(0xffffff, 3));
   const dirLight = new THREE.DirectionalLight(0xffffff, 1);
   dirLight.position.set(5, 5, 5);
   scene.add(dirLight);

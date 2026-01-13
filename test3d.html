@@ -119,7 +119,7 @@
     
     <div class="gallery-scroll-container">
         <div class="gallery-photos" id="galleryPhotos">
-            <!-- Dynamic photos will be rendered here -->
+            
         </div>
     </div>
 </section>
@@ -134,22 +134,25 @@
 
 </section> -->
 
-<section class="projects-section guestBook-section">
-      <div class="section-label">GuestBook</div>
-    <h2 class="section-title">Share your  <span class="hero-accent">thoughts</span></h2>
 
-    <div class="input-section position-relative">
-             <span class="skeleton-label">INPUT SECTION</span>
+    <section class="projects-section  guestBook-section">
+    <div class="section-label">GuestBook</div>
+    <h2 class="section-title">Share your <span class="hero-accent">thoughts</span></h2>
+
+    <div class="input-section">
+        <div class="guestbook-form">
+            <input type="text" id="guestName" placeholder="Your Name" class="gb-input">
+            <textarea id="guestMessage" placeholder="Your Message..." class="gb-input gb-textarea"></textarea>
+            <button id="submitGuestbook" class="btn"><span>Post Message</span></button>
         </div>
+    </div>
 
-        <div class="entries-section position-relative">
-            <span class="skeleton-label">ENTRIES DISPLAY SECTION</span>
-            
+    <div class="entries-section">
+        <div id="entriesContainer">
+            <p class="no-entries">No messages yet. Be the first!</p>
         </div>
-    
-    <div class="input-container"></div>
-
-    </section>
+    </div>
+</section>
 
 
 
@@ -227,7 +230,7 @@
             <button class="bottom-sheet-close" id="bottomSheetClose">×</button>
         </div>
         <div class="bottom-sheet-content" id="bottomSheetContent">
-            <!-- Dynamic content -->
+            
         </div>
     </div>
 
@@ -237,7 +240,7 @@
     <script src="js/stats.js"></script>
     <script src="js/projects.js"></script>
     <script src="js/insights.js"></script>
-
+    <script src="js/guestbook.js"></script>
     <script src="js/gallery.js"></script>
     <script src="js/animations.js"></script>
 
