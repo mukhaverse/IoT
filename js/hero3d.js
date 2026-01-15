@@ -48,9 +48,12 @@ function initHero3D() {
   let BASE_SCALE = getResponsiveScale();
 
   const loader = new THREE.GLTFLoader();
+  const dracoLoader = new THREE.DRACOLoader();
+  dracoLoader.setDecoderPath('https://www.gstatic.com/draco/v1/decoders/'); // Google-hosted decoder
+  loader.setDRACOLoader(dracoLoader);
 
   loader.load(
-    'assets/models/arduino.glb',
+    'assets/models/arduino-draco.glb',
     (gltf) => {
       model = gltf.scene;
       model.scale.set(BASE_SCALE, BASE_SCALE, BASE_SCALE);
