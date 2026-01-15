@@ -26,7 +26,7 @@ function initHero3D() {
 
   // Lights
   scene.add(new THREE.AmbientLight(0xffffff, 3));
-  const dirLight = new THREE.DirectionalLight(0xffffff, 1);
+  const dirLight = new THREE.DirectionalLight(0xffffff, 0.5);
   dirLight.position.set(5, 5, 5);
   scene.add(dirLight);
 
@@ -71,7 +71,7 @@ function initHero3D() {
         defaults: { ease: "power3.out" },
         onComplete: () => (isBreathing = true)
       })
-      .from(model.position, { y: 3, duration: 1.8 }, 0)
+      .from(model.position, { y: 3, duration: 2 }, 0)
       .from(model.scale, { x: 3, y: 3, z: 3, duration: 1.8, ease: "back.out(1.5)" }, 0);
 
       // Scroll-triggered flip

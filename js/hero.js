@@ -29,6 +29,7 @@ function initHeroAnimations() {
         duration: 1.5,
         y: 30,
         opacity: 0,
+        delay: 1,
         ease: 'power3.out'
     });
 
@@ -37,7 +38,7 @@ function initHeroAnimations() {
         y: 80,
         opacity: 0,
         stagger: 0.7,
-        delay: 0.5,
+        delay: 1,
         ease: 'power4.out'
     });
 
@@ -45,7 +46,7 @@ function initHeroAnimations() {
         duration: 1.5,
         y: 30,
         opacity: 0,
-        delay: 1.5,
+        delay: 2.5,
         ease: 'power3.out'
     });
 
@@ -54,7 +55,7 @@ function initHeroAnimations() {
         y: 20,
         opacity: 0,
         stagger: 0.5,
-        delay: 2,
+        delay: 3.4,
         ease: 'power3.out'
     });
 
@@ -63,7 +64,7 @@ function initHeroAnimations() {
     gsap.from('.corner-ui', {
         duration: 1,
         opacity: 0,
-        delay: 1.5,
+        delay: 2,
         stagger: 0.1,
         ease: 'power2.out'
     });

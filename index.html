@@ -3,264 +3,251 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IoT Exhibition 2026 | University</title>
-    
+    <title>IoT Exhibition 2025</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    
-    <style>
-        :root {
-            --bg: #ffffff;
-            --surface: #f9f9f9;
-            --border: #e0e0e0;
-            --text-main: #1a1a1a;
-            --text-sub: #666666;
-            --accent: #000000;
-        }
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/hero3d.css">
+    <link rel="stylesheet" href="css/stats.css">
+    <link rel="stylesheet" href="css/projects.css">
+    <link rel="stylesheet" href="css/insights.css">
+    <link rel="stylesheet" href="css/testimonials.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/gallery.css">
+    <link rel="stylesheet" href="css/guestBook.css">
 
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', system-ui, sans-serif; }
-        body { background: var(--bg); color: var(--text-main); line-height: 1.6; overflow-x: hidden; }
 
-        /* --- NAVIGATION --- */
-        nav {
-            padding: 20px 5%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 1px solid var(--border);
-            position: sticky;
-            top: 0;
-            background: rgba(255,255,255,0.8);
-            backdrop-filter: blur(10px);
-            z-index: 10;
-        }
-        .nav-links a { margin-left: 20px; text-decoration: none; color: var(--text-main); font-weight: 500; font-size: 0.9rem; }
-
-        /* --- HERO SECTION --- */
-        .hero {
-            padding: 100px 5%;
-            text-align: center;
-            border-bottom: 1px solid var(--border);
-        }
-        .hero h1 { font-size: clamp(2.5rem, 8vw, 4rem); letter-spacing: -2px; line-height: 1; }
-        .hero p { color: var(--text-sub); margin: 20px 0; font-size: 1.2rem; }
-
-        /* --- STATS / PULSE --- */
-        .stats-bar {
-            display: flex;
-            justify-content: space-around;
-            padding: 40px 5%;
-            background: var(--surface);
-            border-bottom: 1px solid var(--border);
-        }
-        .stat-item h3 { font-size: 1.5rem; }
-        .stat-item p { font-size: 0.8rem; text-transform: uppercase; color: var(--text-sub); }
-
-        /* --- LEADERBOARD --- */
-        .leaderboard-section { padding: 80px 5%; }
-        .leaderboard-list { margin-top: 30px; max-width: 600px; }
-        .leader-entry {
-            display: flex;
-            justify-content: space-between;
-            padding: 15px 0;
-            border-bottom: 1px solid var(--border);
-        }
-
-        /* --- PROJECT CAROUSEL --- */
-        .projects-section { padding: 80px 0 80px 5%; background: var(--surface); }
-        .carousel-wrapper {
-            display: flex;
-            gap: 20px;
-            overflow-x: auto;
-            padding-right: 5%;
-            scroll-snap-type: x mandatory;
-            scrollbar-width: none; /* Hide scrollbar Firefox */
-        }
-        .carousel-wrapper::-webkit-scrollbar { display: none; } /* Hide scrollbar Chrome/Safari */
-
-        .project-card {
-            min-width: 350px;
-            background: white;
-            border: 1px solid var(--border);
-            border-radius: 16px;
-            padding: 24px;
-            scroll-snap-align: start;
-            cursor: pointer;
-            transition: transform 0.3s ease;
-        }
-        .project-card:hover { transform: translateY(-5px); border-color: var(--accent); }
-        .project-card h3 { margin-bottom: 10px; }
-        .card-footer { display: flex; justify-content: space-between; align-items: center; margin-top: 20px; }
-        .like-btn { background: none; border: 1px solid var(--border); padding: 5px 12px; border-radius: 20px; cursor: pointer; }
-
-        /* --- BOTTOM SHEET --- */
-        .sheet-overlay {
-            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(0,0,0,0.4); z-index: 99; display: none; opacity: 0;
-        }
-        .bottom-sheet {
-            position: fixed; bottom: 0; left: 0; width: 100%; height: 85vh;
-            background: white; border-radius: 30px 30px 0 0; z-index: 100;
-            transform: translateY(100%);
-            padding: 50px 5%;
-            box-shadow: 0 -10px 40px rgba(0,0,0,0.1);
-            overflow-y: auto;
-        }
-        .sheet-close { position: absolute; top: 25px; right: 5%; cursor: pointer; font-size: 1.5rem; }
-        
-        .sheet-content { display: grid; grid-template-columns: 1.5fr 1fr; gap: 60px; margin-top: 40px; }
-        .team-member { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
-        .linkedin-icon { width: 20px; height: 20px; background: #0077b5; border-radius: 3px; display: inline-block; }
-        
-        .tech-pill {
-            display: inline-block; background: var(--surface); border: 1px solid var(--border);
-            padding: 6px 14px; border-radius: 8px; font-size: 0.85rem; margin: 0 8px 8px 0;
-        }
-
-        /* --- FOOTER --- */
-        footer { padding: 60px 5%; border-top: 1px solid var(--border); text-align: center; color: var(--text-sub); font-size: 0.9rem; }
-
-        @media (max-width: 768px) {
-            .sheet-content { grid-template-columns: 1fr; }
-            .project-card { min-width: 280px; }
-        }
-    </style>
 </head>
 <body>
+    <!-- Corners -->
+    <div class="corner-ui corner-ui-tl">[IoT]</div>
+    <div class="corner-ui corner-ui-tr">[+]</div>
+    <div class="corner-ui corner-ui-bl">001</div>
+    <div class="corner-ui corner-ui-br">[UJ]</div>
 
-    <nav>
-        <div class="logo"><strong>IoT</strong> EXPO</div>
-        <div class="nav-links">
-            <a href="#projects">Projects</a>
-            <a href="#leaderboard">Popularity</a>
-            <a href="#location">Info</a>
-        </div>
-    </nav>
-
+    <!-- Hero Section -->
     <section class="hero">
-        <h1>Innovation <br>Unfiltered.</h1>
-        <p>A showcase of next-gen IoT solutions built by University Students.</p>
-        <button class="like-btn" style="padding: 10px 25px;">Explore the Gallery</button>
-    </section>
-
-    <section class="stats-bar">
-        <div class="stat-item"><h3>24</h3><p>Live Projects</p></div>
-        <div class="stat-item"><h3>12</h3><p>Sponsors</p></div>
-        <div class="stat-item"><h3>600+</h3><p>Expected Visitors</p></div>
-    </section>
-
-    <section id="leaderboard" class="leaderboard-section">
-        <h2>🔥 Trending Projects</h2>
-        <div class="leaderboard-list">
-            <div class="leader-entry"><span>01. Smart Irrigation v2</span> <span>142 Likes</span></div>
-            <div class="leader-entry"><span>02. Health Band Pro</span> <span>128 Likes</span></div>
-            <div class="leader-entry"><span>03. Traffic AI Node</span> <span>95 Likes</span></div>
-        </div>
-    </section>
-
-    <section id="projects" class="projects-section">
-        <h2 style="margin-bottom: 30px;">Project Gallery</h2>
-        <div class="carousel-wrapper">
-            <div class="project-card" onclick="openSheet('Smart Irrigation v2', 'An automated system that uses soil moisture data to conserve 40% more water in urban gardens.')">
-                <div style="height: 180px; background: #eee; border-radius: 10px; margin-bottom: 15px;"></div>
-                <h3>Smart Irrigation v2</h3>
-                <p>Team: HydroTech</p>
-                <div class="card-footer">
-                    <span class="tech-pill">ESP32</span>
-                    <button class="like-btn">❤️ 142</button>
-                </div>
-            </div>
-            <div class="project-card" onclick="openSheet('Health Band Pro', 'A wearable device tracking vital signs and sending alerts via MQTT to hospital dashboards.')">
-                <div style="height: 180px; background: #eee; border-radius: 10px; margin-bottom: 15px;"></div>
-                <h3>Health Band Pro</h3>
-                <p>Team: BioLink</p>
-                <div class="card-footer">
-                    <span class="tech-pill">LoRaWAN</span>
-                    <button class="like-btn">❤️ 128</button>
-                </div>
-            </div>
-             <div class="project-card" onclick="openSheet('AI Traffic Node', 'Edge-computing node that optimizes traffic light timings based on real-time vehicle flow.')">
-                <div style="height: 180px; background: #eee; border-radius: 10px; margin-bottom: 15px;"></div>
-                <h3>AI Traffic Node</h3>
-                <p>Team: UrbanAI</p>
-                <div class="card-footer">
-                    <span class="tech-pill">Raspberry Pi</span>
-                    <button class="like-btn">❤️ 95</button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <div class="sheet-overlay" id="sheetOverlay" onclick="closeSheet()"></div>
-    <div class="bottom-sheet" id="bottomSheet">
-        <div class="sheet-close" onclick="closeSheet()">✕</div>
-        <h1 id="sheetTitle">Project Title</h1>
+        <div class="hero-grid"></div>
+        <div class="particles" id="particles"></div>
+        <!-- <div class="floating-shape shape-circle"></div> -->
+        <!-- <div class="floating-shape shape-square"></div> -->
+        <!-- <div class="floating-shape shape-triangle"></div> -->
+        <!-- <div class="floating-shape shape-hexagon"></div> -->
         
-        <div class="sheet-content">
-            <div class="content-main">
-                <h3>The Problem & Solution</h3>
-                <p id="sheetDesc">Detailed information about the project goes here...</p>
-                
-                <h3 style="margin-top: 30px;">The Team</h3>
-                <div class="team-member">
-                    <span>Alex Johnson</span> 
-                    <a href="#" class="linkedin-icon"></a>
-                </div>
-                <div class="team-member">
-                    <span>Sarah Lee</span> 
-                    <a href="#" class="linkedin-icon"></a>
-                </div>
-            </div>
-            <div class="content-sidebar">
-                <h3>Technical Specs</h3>
-                <div style="margin-top: 15px;">
-                    <p><strong>Connectivity</strong></p>
-                    <span class="tech-pill">Wi-Fi</span> <span class="tech-pill">MQTT</span>
-                </div>
-                <div style="margin-top: 15px;">
-                    <p><strong>Hardware</strong></p>
-                    <span class="tech-pill">ESP32</span> <span class="tech-pill">DHT11 Sensor</span>
+        <div class="hero-inner">
+
+            <div class="hero-content">
+                <div class="hero-label">EXHIBITION 2025</div>
+                <h1 class="hero-title">
+                    <span class="hero-accent">IoT</span>
+                    <span>SHOWCASE</span>
+                </h1>
+                <p class="hero-subtitle">
+                    An exhibition of student work in Internet of Things technology.
+                </p>
+                <div class="hero-meta">
+                    <span>Location</span>
+                    <span>Date</span>
+                    <span>Time</span>
                 </div>
             </div>
+
+            <div class="hero-3d">
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="section-label">The Numbers</div>
+        <h2 class="section-title">BY THE <span class="hero-accent">METRICS</span></h2>
+        <div class="stats-grid" id="statsGrid">
+            <!-- Dynamic stats will be rendered here -->
+        </div>
+    </section>
+
+
+
+    <!-- Projects Section -->
+    <section class="projects-section">
+        <div class="projects-header">
+            <div>
+                <div class="section-label">Students Work</div>
+                <h2 class="section-title">FEATURED <span class="hero-accent">PROJECTS</span></h2>
+            </div>
+        </div>
+        
+        <div class="projects-carousel-wrapper">
+            <button class="carousel-btn carousel-btn-prev" id="prevBtn">‹</button>
+            <div class="projects-carousel">
+                <div class="projects-track" id="projectsTrack">
+                    <!-- Dynamic project cards -->
+                </div>
+            </div>
+            <button class="carousel-btn carousel-btn-next" id="nextBtn">›</button>
+        </div>
+
+        <!-- <div class="view-all-container">
+            <a href="#" class="btn"><span>View All Projects</span></a>
+        </div> -->
+    </section>
+
+
+
+    <!-- Questionnaire Section -->
+    <!-- <section class="questionnaire-section">
+        <div class="section-label">Survey Results</div>
+        <h2 class="section-title">CLASS <span class="hero-accent">INSIGHTS</span></h2>
+        <div class="insights-grid" id="insightsGrid">
+           
+        </div>
+    </section> -->
+
+
+
+
+
+
+<!-- Gallery  -->
+<section class="gallery-section">
+    <div class="section-label">Gallery</div>
+    <h2 class="section-title">behind the   <span class="hero-accent">scenes</span></h2>
+    
+    <div class="gallery-scroll-container">
+        <div class="gallery-photos" id="galleryPhotos">
+            
+        </div>
+    </div>
+</section>
+
+<!-- GuestBook  -->
+<!-- <section class="guestBook-section">
+    <div class="section-label">GuestBook</div>
+    <h2 class="section-title">Share your  <span class="hero-accent">thoughts</span></h2>
+    
+    <div class="input-container"></div>
+
+
+</section> -->
+
+
+    <section class="projects-section  guestBook-section">
+    <div class="section-label">GuestBook</div>
+    <h2 class="section-title">Share your <span class="hero-accent">thoughts</span></h2>
+
+    <div class="input-section">
+        <div class="guestbook-form">
+            <input type="text" id="guestName" placeholder="Your Name" class="gb-input">
+            <textarea id="guestMessage" placeholder="Your Message..." class="gb-input gb-textarea"></textarea>
+            <button id="submitGuestbook" class="btn"><span>Post Message</span></button>
         </div>
     </div>
 
-    <footer>
-        <p>University IoT Exhibition 2026</p>
-        <p>Faculty of Engineering & Technology</p>
+    <div class="entries-section">
+        <div id="entriesContainer">
+            <p class="no-entries">No messages yet. Be the first!</p>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- Footer -->
+<div class="footer-container">
+    <footer class="footer">
+        <!-- <div class="footer-shape footer-shape-1"></div>
+        <div class="footer-shape footer-shape-2"></div> -->
+        
+        <div class="footer-content">
+            <div class="footer-brand">
+                <div>
+                    <div class="footer-logo-container">
+                        <div class="footer-logo">[IoT]</div>
+                        <div class="footer-logo-badge">2026</div>
+                    </div>
+                    <p class="footer-tagline">
+                        Showcasing student projects from the Introduction to IoT course.
+                    </p>        
+                   
+                    <div class="footer-personal-logo">
+                        <div class="personal-logo">[Logo maybe]</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- <div class="footer-section navi">
+                <h4 class="footer-section-title">Navigate</h4>
+                <ul class="footer-links">
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href=".stats-section">Statistics</a></li>
+                    <li><a href=".projects-section">Projects</a></li>
+                    <li><a href=".questionnaire-section">Insights</a></li>
+                    <li><a href=".gallery-section">Gallery</a></li>
+                </ul>
+            </div> -->
+
+            <div class="footer-section">
+                <h4 class="footer-section-title">About</h4>
+                <ul class="footer-links">
+                    <li>University of Jeddah</li>
+                    <li>Department of Software Engineering</li>
+                    <li>Instructor</li>
+                    <li><a href="#" id="backToTop">↑ Back to Top</a></li> 
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p class="footer-credits">
+                &copy; 2026 IoT Exhibition
+                <!-- <span>·</span>
+                University of Jeddah
+                <span>·</span>
+                Faculty of Engineering
+                <span>·</span>
+                Designed & Developed by [Your Name] -->
+            </p>
+            <div class="footer-social">
+                <!-- <a href="https://github.com/yourusername" target="_blank" aria-label="GitHub"><i class='bx bxl-github'></i></a>
+                <a href="https://linkedin.com/in/yourprofile" target="_blank" aria-label="LinkedIn"><i class='bx bxl-linkedin'></i></a> -->
+                
+            </div>
+        </div>
     </footer>
+</div>
 
-    <script>
-        const sheet = document.getElementById('bottomSheet');
-        const overlay = document.getElementById('sheetOverlay');
+    <!-- Bottom Sheet Overlay -->
+    <div class="project-overlay" id="projectOverlay"></div>
 
-        function openSheet(title, desc) {
-            document.getElementById('sheetTitle').innerText = title;
-            document.getElementById('sheetDesc').innerText = desc;
-
-            overlay.style.display = 'block';
+    <!-- Bottom Sheet -->
+    <div class="project-bottom-sheet" id="projectBottomSheet">
+        <div class="bottom-sheet-header">
+            <div class="bottom-sheet-drag-handle"></div>
+            <button class="bottom-sheet-close" id="bottomSheetClose">×</button>
+        </div>
+        <div class="bottom-sheet-content" id="bottomSheetContent">
             
-            // GSAP Sequence
-            gsap.to(overlay, { opacity: 1, duration: 0.3 });
-            gsap.to(sheet, { 
-                y: "0%", 
-                duration: 0.6, 
-                ease: "power4.out" 
-            });
-            
-            // Prevent body scroll
-            document.body.style.overflow = 'hidden';
-        }
+        </div>
+    </div>
 
-        function closeSheet() {
-            gsap.to(overlay, { opacity: 0, duration: 0.3, onComplete: () => overlay.style.display = 'none' });
-            gsap.to(sheet, { 
-                y: "100%", 
-                duration: 0.5, 
-                ease: "power2.in" 
-            });
-            
-            document.body.style.overflow = 'auto';
-        }
-    </script>
+    
+    <script src="js/main.js"></script>
+    <script src="js/hero.js"></script>
+    <script src="js/stats.js"></script>
+    <script src="js/projects.js"></script>
+    <script src="js/insights.js"></script>
+    <script src="js/guestbook.js"></script>
+    <script src="js/gallery.js"></script>
+    <script src="js/animations.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/mrdoob/three.js@r128/examples/js/loaders/GLTFLoader.js"></script>
+
+    <script src="js/hero3d.js"></script>
+
 </body>
 </html>
