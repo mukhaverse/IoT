@@ -6,11 +6,27 @@
     box-sizing: border-box;
 }
 
-:root {
-    --dark: #24303e;
-    --dark-navy: #1a232e;
+/* blue-is */
+/* :root {
+    --dark: #41556c;
+    --dark-navy: #2a394b;
     --cream: #f5f5f0;
-    --mint: #00eeff;
+    --mint: #00b9d1;
+    --prpl: #943DE0;
+    --mint-glow: rgba(84, 135, 255, 0.3);
+    --spacing-sm: 1rem;
+    --spacing-md: 2rem;
+    --spacing-lg: 4rem;
+    --spacing-xl: 6rem;
+} */
+
+
+/* og with litgher bg */
+:root {
+    --dark: #0f151b;
+    --dark-navy: #131920;
+    --cream: #f5f5f0;
+    --mint: #00ff9f;
     --prpl: #943DE0;
     --mint-glow: rgba(0, 255, 159, 0.3);
     --spacing-sm: 1rem;
@@ -19,6 +35,12 @@
     --spacing-xl: 6rem;
 }
 
+
+
+
+
+
+/* OG?\ */
 /* :root {
     --dark: #0a0e12;
     --dark-navy: #131920;
