@@ -2,6 +2,7 @@
 .projects-section {
     padding: var(--spacing-xl) var(--spacing-md);
     background: var(--dark);
+    padding-bottom: 18rem;
 }
 
 .projects-header {

@@ -6,8 +6,6 @@
     z-index: 100; 
     background: var(--dark); 
 
-    margin-top: 8rem;
-    margin-bottom: 8rem;
 }
 
 .container section {
@@ -20,7 +18,7 @@
 .bts-word {
     width: 100%;
     color: var(--cream);
-    font-size: clamp(10vw, 48vw, 600px);
+    font-size: clamp(8vw, 30vw, 500px);
     font-weight: 700;
     text-align: center;
     margin: 0;
@@ -43,8 +41,8 @@
 
 .card {
     position: absolute;
-    width: clamp(200px, 25vw, 350px);
-    height: clamp(200px, 25vw, 350px);
+    width: 200px;
+    height: 200px;
     border-radius: 20px;
     overflow: hidden;
     will-change: transform;
@@ -60,29 +58,47 @@
     display: block;
 }
 
-/* Cards positioned to appear during horizontal scroll */
-/* These positions are relative to the 400vw wide wrapper */
-.card-1 {
-    top: 15%;
-    left: 5vw; /* Visible immediately on the left */
+
+
+
+#card-1 {
+  top: 18%;
+  left: 60vw;
 }
 
-.card-2 {
-    top: 60%;
-    left: 70vw; /* Appears as you start scrolling */
+#card-2 {
+  top: 62%;
+  left: 85vw;
 }
 
-.card-3 {
-    top: 20%;
-    left: 180vw; /* Appears midway through scroll */
+#card-3 {
+  top: 28%;
+  left: 115vw;
 }
 
-.card-4 {
-    top: 55%;
-    left: 280vw; /* Appears near the end */
+#card-4 {
+  top: 72%;
+  left: 145vw;
 }
 
-/* Responsive adjustments */
+#card-5 {
+  top: 20%;
+  left: 190vw;
+}
+
+#card-6 {
+  top: 58%;
+  left: 240vw;
+}
+
+#card-7 {
+  top: 32%;
+  left: 320vw;
+}
+
+
+
+
 @media (max-width: 768px) {
     .bts-word {
         font-size: clamp(15vw, 60vw, 400px);
