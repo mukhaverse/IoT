@@ -1,3 +1,7 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Marvel:ital,wght@0,400;0,700;1,400;1,700&family=Orbitron:wght@400..900&family=Smooch+Sans:wght@100..900&family=Tektur:wght@400..900&display=swap');
+
+
 .container {
     width: 100%;
     height: 100vh;
@@ -18,8 +22,9 @@
 .bts-word {
     width: 100%;
     color: var(--cream);
-    font-size: clamp(8vw, 30vw, 500px);
-    font-weight: 700;
+    /* font-family: "Roslindale display condensed" ; */
+    font-size: 48vw;
+    font-weight: 400;
     text-align: center;
     margin: 0;
     position: absolute;
@@ -41,8 +46,8 @@
 
 .card {
     position: absolute;
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
     border-radius: 20px;
     overflow: hidden;
     will-change: transform;
@@ -105,8 +110,8 @@
     }
     
     .card {
-        width: clamp(150px, 30vw, 250px);
-        height: clamp(150px, 30vw, 250px);
+        width: 150px;
+        height: 150px;
     }
     
     .card-1 {
@@ -132,7 +137,7 @@
 
 @media (max-width: 480px) {
     .card {
-        width: clamp(120px, 35vw, 200px);
-        height: clamp(120px, 35vw, 200px);
+        width: 150px;
+        height: 150px;
     }
 }
