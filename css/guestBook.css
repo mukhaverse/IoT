@@ -15,6 +15,7 @@
     border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
+
 .guestbook-form {
     display: flex;
     flex-direction: column;
@@ -32,14 +33,18 @@
     transition: border-color 0.3s ease;
 }
 
+
 .gb-input:focus {
     border-color: var(--mint);
 }
+
+
 
 .gb-textarea {
     min-height: 120px;
     resize: vertical;
 }
+
 
 
 #entriesContainer {
@@ -60,6 +65,8 @@
     border-radius: 0 4px 4px 0;
 }
 
+
+
 .guest-entry:hover {
     transform: translateX(5px);
     box-shadow: -5px 0 20px var(--mint-glow);
@@ -75,6 +82,7 @@
     padding-bottom: 0.5rem;
 }
 
+
 .entry-name {
     font-weight: 700;
     color: var(--mint);
@@ -86,12 +94,15 @@
 .entry-name::before { content: "["; margin-right: 4px; opacity: 0.5; }
 .entry-name::after { content: "]"; margin-left: 4px; opacity: 0.5; }
 
+
 .entry-time {
     font-size: 0.7rem;
     color: white;
     font-family: monospace;
     opacity: 0.7;
 }
+
+
 
 .entry-message {
     font-size: 1rem;

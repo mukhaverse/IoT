@@ -1,4 +1,4 @@
-/* Questionnaire Section with Flip Cards */
+
 .questionnaire-section {
     padding: var(--spacing-xl) var(--spacing-md);
     background: var(--dark-navy);
@@ -105,7 +105,10 @@
     letter-spacing: 0.1em;
 }
 
-/* Responsive */
+
+
+
+
 @media (max-width: 1024px) {
     .insights-grid { grid-template-columns: 1fr; }
 }

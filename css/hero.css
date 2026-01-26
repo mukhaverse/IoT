@@ -1,4 +1,4 @@
-/* Hero Section */
+
 .hero {
     min-height: 100vh;
     display: flex;
@@ -12,6 +12,10 @@
     
     background: linear-gradient(180deg, var(--dark) 0%, var(--dark-navy) 100%);
 }
+
+
+
+
 /* .myimg{
     width: 550px;
 }
@@ -22,6 +26,9 @@
 .hero span{
     padding-left: 3%;
 } */
+
+
+
 
 .particles {
     position: absolute;
@@ -48,48 +55,11 @@
     opacity: 0.03;
 }
 
-.floating-shape {
-    position: absolute;
-    border: 1px solid var(--mint);
-    opacity: 0.15;
-}
 
-.shape-circle {
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
-    top: 15%;
-    left: 10%;
-}
 
-.shape-square {
-    width: 200px;
-    height: 200px;
-    bottom: 20%;
-    right: 15%;
-    transform: rotate(45deg);
-}
 
-/* .shape-triangle {
-    width: 150px;
-    height: 150px;
-    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-    background: var(--mint);
-    opacity: 0.08;
-    top: 50%;
-    right: 25%;
-} */
 
-/* .shape-hexagon {
-    width: 150px;
-    height: 150px;
-    clip-path: polygon(30% 0%, 70% 0%, 100% 50%, 70% 100%, 30% 100%, 0% 50%);
-    background: transparent;
-    border: 1px solid var(--mint);
-    opacity: 0.12;
-    bottom: 30%;
-    left: 20%;
-} */
+
 
 .hero-content {
     text-align: center;
@@ -106,6 +76,7 @@
     font-weight: 500;
 }
 
+
 .hero-title {
     font-size: clamp(3.5rem, 12vw, 7rem);
     font-weight: 700;
@@ -115,9 +86,12 @@
     text-transform: uppercase;
 }
 
+
+
 .hero-title span {
     display: block;
 }
+
 
 .hero-subtitle {
     font-size: clamp(1rem, 2vw, 1.125rem);
@@ -137,26 +111,37 @@
     letter-spacing: 0.1em;
 }
 
-/* Responsive */
+
+
+
+
+
+
+
 @media (max-width: 768px) {
     .corner-ui { font-size: 0.65rem; }
     .corner-ui-tl, .corner-ui-tr { top: 1rem; }
     .corner-ui-tl, .corner-ui-bl { left: 1rem; }
     .corner-ui-tr, .corner-ui-br { right: 1rem; }
     
+
+
     .hero-meta {
         flex-direction: column;
         gap: 1rem;
     }
+
     .hero span{
     padding-left: 1%;
 }
+
 
 }
 
 @media (max-width: 480px) {
     .hero {
         padding: var(--spacing-sm);
+
     }
     
     .hero-title {
@@ -164,6 +149,9 @@
     }
     .hero span{
     padding-left: 1%;
+
 }
+
+
 
 }

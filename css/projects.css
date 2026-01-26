@@ -1,4 +1,4 @@
-/* Projects Section */
+
 .projects-section {
     padding: var(--spacing-xl) var(--spacing-md);
     background: var(--dark);
@@ -26,12 +26,15 @@
     gap: 2rem;
     transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
     transform: translateX(0);
-    padding-right: 412px; /* card width + gap for last card visibility */
+    padding-right: 412px; 
 }
 
-/* --- Project Card Styles --- */
+
+
+
+
 .project-card {
-    width: 380px; /* Fixed width */
+    width: 380px; 
     flex-shrink: 0;
     background: var(--dark-navy);
     border: 1px solid rgba(51, 51, 51, 0.1);
@@ -88,7 +91,10 @@
     z-index: 2;
 }
 
-/* New Content Layout */
+
+
+
+
 .project-content {
     padding: 2rem;
     display: flex;
@@ -98,7 +104,7 @@
     height: calc(100% - 240px);
 }
 
-/* The new "File Type" look (e.g. .webapp) */
+/* might delete later */
 .project-type {
     font-family: 'Courier New', Courier, monospace;
     color: var(--mint);
@@ -126,20 +132,24 @@
     opacity: 0.6;
     margin-bottom: 1rem;
     
-    /* Clamp text to 3 lines */
     display: -webkit-box;
     /* -webkit-line-clamp: 3; */
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
 
-/* Card Expand Button - Positioned Flexibly */
+
+
+
+
+
 .project-expand-container {
-    margin-top: auto; /* Pushes button to bottom */
+    margin-top: auto; 
     align-self: flex-end;
     position: relative;
     z-index: 3;
 }
+
 
 .project-expand-btn {
     background: transparent;
@@ -175,7 +185,11 @@
     filter: brightness(0) invert(1);
 }
 
-/* --- Carousel Controls --- */
+
+
+
+
+
 .carousel-btn {
     position: absolute;
     top: 50%;
@@ -210,7 +224,10 @@
 .carousel-btn-prev { left: 0; }
 .carousel-btn-next { right: 0; }
 
-/* --- Bottom Sheet Structure --- */
+
+
+
+
 .project-overlay {
     position: fixed;
     top: 0;
@@ -242,12 +259,12 @@
     z-index: 2000;
     overflow-y: auto;
     transition: bottom 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    scrollbar-width: none; /* Firefox */
-    -ms-overflow-style: none; /* IE */
+    scrollbar-width: none; 
+    -ms-overflow-style: none; 
 }
 
 .project-bottom-sheet::-webkit-scrollbar {
-    display: none; /* Chrome */
+    display: none;
 }
 
 .project-bottom-sheet.active {
@@ -301,7 +318,9 @@
     padding: 0 2rem 2rem;
 }
 
-/* --- New Sheet Layout (Grid) --- */
+
+
+
 .sheet-hero {
     position: relative;
     width: 100%;
@@ -328,7 +347,7 @@
 
 .sheet-grid {
     display: grid;
-    grid-template-columns: 2fr 1fr; /* Main content left, Meta right */
+    grid-template-columns: 2fr 1fr; 
     gap: 3rem;
 }
 
@@ -361,7 +380,9 @@
     flex-grow: 1;
 }
 
-/* Sidebar Styles */
+
+
+
 .sheet-sidebar {
     background: rgba(255, 255, 255, 0.02);
     padding: 1.5rem;
@@ -389,7 +410,8 @@
     font-weight: 500;
 }
 
-/* Sheet Actions */
+
+
 .project-actions {
     display: flex;
     gap: 1rem;
@@ -403,7 +425,8 @@
     text-align: center;
 }
 
-/* Sheet Team List */
+
+
 .team-members-list {
     display: flex;
     flex-direction: column;
@@ -434,8 +457,15 @@
     font-size: 0.95rem;
 }
 
-/* --- Responsive Adjustments --- */
+
+
+
+
+
+
+
 @media (max-width: 768px) {
+    
     .projects-carousel-wrapper { padding: 0 50px; }
     .carousel-btn { width: 40px; height: 40px; font-size: 1.2rem; }
     .project-card { width: 300px; }
@@ -444,6 +474,7 @@
     .project-actions {
         flex-direction: column;
     }
+
     
     .project-actions .btn {
         flex: none;
@@ -455,7 +486,7 @@
         border-radius: 0;
     }
 
-    /* Stack the new sheet grid on mobile */
+    
     .sheet-grid {
         grid-template-columns: 1fr;
         gap: 2rem;
@@ -464,6 +495,7 @@
     .sheet-hero {
         height: 200px;
     }
+
 
     .bottom-sheet-header {
         padding: 1.5rem;
@@ -474,11 +506,14 @@
     }
 }
 
+
+
 @media (max-width: 480px) {
     .projects-carousel-wrapper {
         padding: 0 40px;
     }
     
+
     .project-card {
         width: 280px;
     }
@@ -486,4 +521,5 @@
     .projects-track { 
         padding-right: 312px; 
     }
+
 }

@@ -1,10 +1,10 @@
-/* Feedback Section */
+/* 
 .feedback-section {
     padding: var(--spacing-xl) var(--spacing-md);
     background: var(--dark-navy);
 }
 
-/* Feedback Carousel */
+
 .feedback-carousel {
     max-width: 900px;
     margin: 0 auto var(--spacing-lg);
@@ -84,7 +84,7 @@
     background: rgba(0, 255, 159, 0.1);
 }
 
-/* Empty State */
+
 .feedback-empty {
     text-align: center;
     padding: 4rem 2rem;
@@ -102,7 +102,7 @@
     margin-bottom: 1rem;
 }
 
-/* Carousel Navigation */
+
 .feedback-nav {
     display: flex;
     justify-content: center;
@@ -126,13 +126,13 @@
     background: rgba(0, 255, 159, 0.1);
 }
 
-/* CTA Section */
+
 .feedback-cta {
     text-align: center;
     margin-top: var(--spacing-lg);
 }
 
-/* Form Container */
+
 .feedback-form-container {
     max-width: 700px;
     margin: 3rem auto 0;
@@ -232,7 +232,7 @@
     cursor: not-allowed;
 }
 
-/* Footer Note */
+
 .feedback-note {
     text-align: center;
     padding: 2rem;
@@ -241,7 +241,7 @@
     margin-top: var(--spacing-lg);
 }
 
-/* Responsive */
+
 @media (max-width: 768px) {
     .feedback-stats {
         gap: 2rem;
@@ -262,4 +262,4 @@
     .feedback-form-container {
         padding: 1.5rem;
     }
-}
+} */

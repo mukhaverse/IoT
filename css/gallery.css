@@ -1,11 +1,11 @@
-/* Gallery Section - Updated to work with footer */
+
 .gallery-section {
     padding: var(--spacing-xl) 0;
     overflow: hidden;
     position: relative;
-    z-index: 2; /* Changed from 10 to 2 */
+    z-index: 2; 
     background: var(--dark);
-    /* Add padding bottom to give space before footer */
+    
     padding-bottom: calc(var(--spacing-xl) + 100px);
 }
 
@@ -14,6 +14,7 @@
     height: 70vh;
     margin-top: var(--spacing-lg);
 }
+
 
 .gallery-photos {
     position: absolute;
@@ -30,6 +31,8 @@
     opacity: 0;
 }
 
+
+
 .gallery-photo img {
     width: 220px;
     height: 220px;
@@ -38,6 +41,7 @@
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.105);
     transition: all 0.3s ease;
 }
+
 
 .gallery-photo:hover img {
      border: 3px solid rgba(51, 51, 51, 0.197);
