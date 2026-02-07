@@ -23,7 +23,7 @@
     width: 100%;
     color: var(--cream);
     /* font-family: "Roslindale display condensed" ; */
-    font-size: 48vw;
+    font-size: 40vw;
     font-weight: 400;
     text-align: center;
     margin: 0;
@@ -46,8 +46,8 @@
 
 .card {
     position: absolute;
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 200px;
     border-radius: 20px;
     overflow: hidden;
     will-change: transform;
@@ -78,27 +78,27 @@
 
 #card-3 {
   top: 28%;
-  left: 115vw;
+  left: 157vw;
 }
 
 #card-4 {
   top: 72%;
-  left: 145vw;
+  left: 245vw;
 }
 
 #card-5 {
   top: 20%;
-  left: 190vw;
+  left: 320vw;
 }
 
 #card-6 {
-  top: 58%;
-  left: 240vw;
+  top: 68%;
+  left: 410vw;
 }
 
 #card-7 {
   top: 32%;
-  left: 320vw;
+  left: 470vw;
 }
 
 

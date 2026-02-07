@@ -24,7 +24,7 @@ ScrollTrigger.create({
 
     trigger: ".container",
     start: "top top",
-    end: () => `+=${scrollDistance * 3 + 1500}`,
+    end: () => `+=${scrollDistance * 3 + 500}`,
     scrub: 1,
     pin: true,
      animation: gsap.to(".wrapper-bts", {
@@ -36,9 +36,9 @@ ScrollTrigger.create({
 cards.forEach((card) => {
 
   ScrollTrigger.create({
-    trigger: card.id,
+    trigger: ".container",
     start: "top top",
-    end: "+=1200",
+     end: () => `+=${scrollDistance * 3 + 500}`,
     scrub: 1,
 
     onUpdate: (self) => {
